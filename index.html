@@ -216,7 +216,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
                     <img class="w-75 mb-4" src="img/about.png" alt="">
-                    <p>About RK Motors</p>
                 </div>
             </div>
             <!-- <div class="row mt-3">
@@ -857,31 +856,6 @@
     <!-- Template Javascript -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        function sendEmail() {
-            const date = document.getElementById("idate").value
-            const time = document.getElementById("itime").value
-            const email = document.getElementById("email").value
-            let body = document.getElementById("body").value
-            body = `Date: ${date}, Time: ${time}, Problem: ${body}, Email: ${email}`
-
-            Email.send({
-                SecureToken: "fb4e722d-908b-46b1-bb50-006530eee53d",
-                To: "whoamiagent007@gmail.com",
-                From: "whoamiagent007@gmail.com",
-                Subject: "RK Motors Appointment Schedule",
-                Body: body
-            }).then(
-                message => {
-                    if (message == "OK") {
-                        alert("Mail sent successfully")
-                    } else {
-                        alert("Something went wrong. Please try again.")
-                    }
-                }
-            );
-        }
-    </script>
 </body>
 
 </html>
